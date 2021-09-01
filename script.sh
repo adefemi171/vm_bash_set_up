@@ -12,11 +12,6 @@ sudo apt install openjdk-8-jdk openjdk-8-jre -y
 
 sleep 3
 
-# installing application to send mail
-sudo apt-get install mailutils -y
-
-sleep 3
-
 cat >> /etc/environment <<EOL
 JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 JRE_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre
