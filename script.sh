@@ -29,6 +29,10 @@ source /etc/profile.d/tabcmd.sh
 
 sleep 3
 
+sudo /opt/tableau/tabcmd/bin/tabcmd --accepteula
+
+sleep 3
+
 echo 'Enter the Tableau  server link (eg: http://tableauserver:80) ': 
 read varServer
 
@@ -38,7 +42,7 @@ read varUsername
 echo 'Enter your Tableau Password (eg: password ) ': 
 read -s varPassword
 
-tabcmd login -s $varServer -u $varUsername -p $varPassword
+sudo /opt/tableau/tabcmd/bin/tabcmd login -s $varServer -u $varUsername -p $varPassword
 
 sleep 5
 
@@ -51,4 +55,4 @@ read -s varFilename
 echo 'Enter file name with extension (eg: progressReport.pdf): '
 read -p " " varFilename
 
-tabcmd get "$varUrlView" -f "$varFilename"
+sudo /opt/tableau/tabcmd/bin/tabcmd get "$varUrlView" -f "$varFilename"
