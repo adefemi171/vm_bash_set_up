@@ -25,7 +25,13 @@ read -p " " emailSender
 echo 'Enter email Subject to send file : '
 read -p " " subject
 
-echo 'Enter receiver email to receive file : '
-read -p " " emailReceiver
+echo 'Enter receiver email 1 to receive file : '
+read -p " " emailReceiver1
 
-echo "$body" | mail -r $emailSender -s "$subject" -A "$varFilename" $emailReceiver
+echo 'Enter receiver email 2 to receive file : '
+read -p " " emailReceiver2
+
+# echo 'Enter receiver email 3 to receive file : '
+# read -p " " emailReceiver3
+
+echo "$body" | mail -r $emailSender -s "$subject" -A "$varFilename" $emailReceiver1,$emailReceiver2
