@@ -1,7 +1,6 @@
 #!/bin/bash
 #!/bin/bash -x
-## TxS 03-2020 
-## v1.18.1 CKAD
+
 echo "This script is written to work with Ubuntu 18.04"
 sleep 3
 echo
